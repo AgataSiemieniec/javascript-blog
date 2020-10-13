@@ -6,12 +6,14 @@
 }
 
 body {
-  background: #fff;
   font-family: "Source Sans Pro", sans-serif;
-  color: #444;
+  color: #8e44ad;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.7;
+  background-image: url(https://images.pexels.com/photos/1309766/pexels-photo-1309766.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-size: cover;
+  background-position: center center;
 }
 
 .container {
@@ -42,19 +44,23 @@ body {
 .sidebar {
   -ms-flex: 1 0 0px;
       flex: 1 0 0;
+  text-align: center;
+  line-height: 2.0;
 }
 
 .posts {
-  -ms-flex: 2 0 0px;
-      flex: 2 0 0;
+  -ms-flex: 5 0 0px;
+      flex: 5 0 0;
+  position: relative;
 }
 
 .sidebar, .posts {
   background: #fff;
   margin-right: 10px;
   padding: 40px;
-  border: 1px solid #444;
+  border: none;
   border-radius: 5px;
+  opacity: 0.82;
 }
 
 /* Logo */
@@ -64,6 +70,8 @@ body {
   font-size: 104px;
   line-height: 1;
   text-align: center;
+  text-shadow: 2px 4px 10px #fff;
+  color: #fff;
 }
 
 /* Lists */
@@ -88,11 +96,20 @@ body {
 
 /* Post */
 .post {
-  display: none;
+  transition: all 0.3s ease-in;
+  position: absolute;
+  opacity: 0;
+  padding-right: 30px;
 }
 
 .post.active {
-  display: block;
+  opacity: 1;
+  z-index: 11;
+}
+
+.post-title {
+  font-size: 22px;
+  text-align: center;
 }
 
 .post-author {
@@ -102,6 +119,7 @@ body {
 .post-tags {
   display: -ms-flexbox;
   display: flex;
+  font-size: 13px;
 }
 
 .post-tags p {

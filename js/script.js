@@ -1,7 +1,7 @@
 {
-'use strict';
+  'use strict';
 
-const titleClickHandler = function(event){
+  const titleClickHandler = function(event){
     event.preventDefault();
     const clickedElement = this;
     console.log('Link was clicked!');
@@ -22,7 +22,7 @@ const titleClickHandler = function(event){
     const activeArticles = document.querySelectorAll('.posts article.active');
 
     for(let activeArticle of activeArticles){
-        activeArticle.classList.remove('active');
+      activeArticle.classList.remove('active');
     }
   
     /* [DONE] get 'href' attribute from the clicked link */
@@ -37,14 +37,13 @@ const titleClickHandler = function(event){
     targetArticle.classList.add('active');
     console.log('targetArticle:', targetArticle);
 
-  }
+  };
     
-const optArticleSelector = '.post',
-      optTitleSelector = '.post-title',
-      optTitleListSelector = '.titles';
+  const optArticleSelector = '.post',
+    optTitleSelector = '.post-title',
+    optTitleListSelector = '.titles';
     
-
-function generateTitleLinks(){
+  const generateTitleLinks = function() {
 
     /* [DONE] remove contents of titleList */
     const titleList = document.querySelector(optTitleListSelector);
@@ -53,7 +52,7 @@ function generateTitleLinks(){
   
     /* [DONE] for each article */
     const articles = document.querySelectorAll(optArticleSelector);
-    console.log(articles)
+    console.log(articles);
 
     let html = '';
 
@@ -72,23 +71,23 @@ function generateTitleLinks(){
       const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
     
       /* [DONE]insert link into titleList */
-      console.log(linkHTML)
+      console.log(linkHTML);
 
       /* [DONE] insert link into html variable */
       html = html + linkHTML;
       
     }
 
-    titleList.innerHTML = html
+    titleList.innerHTML = html;
     console.log(html);
 
     const links = document.querySelectorAll('.titles a');
 
     for(let link of links){
       link.addEventListener('click', titleClickHandler);
-  }
+    }
 
-  }
+  };
 
   generateTitleLinks();
 }

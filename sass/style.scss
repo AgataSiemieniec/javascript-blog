@@ -37,6 +37,7 @@ body {
   text-transform: uppercase;
   font-family: $font-header;
   font-weight: 600;
+
   span {
     text-transform: none;
     font-weight: 400;
@@ -91,6 +92,7 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
+
   .active {
     font-weight: bold;
   }
@@ -118,6 +120,7 @@ body {
   position: absolute;
   opacity: 0;
   padding-right: 30px;
+
   &.active {
     opacity: 1;
     z-index: 11;
@@ -137,6 +140,7 @@ body {
 .post-tags {
   display: flex;
   font-size: 13px;
+  
   p {
     margin: 0 10px 0 0;
   }

@@ -2,7 +2,7 @@
   "name": "taskrunner",
   "version": "1.0.0",
   "description": "",
-  "main": "index.html",
+  "main": "index.js",
   "scripts": {
     "init-project": "npm install && npm-run-all init:*",
     "init:dirs": "mkdirp sass css vendor images js",
@@ -24,10 +24,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "postcss": "^8.1.1"
+  },
   "devDependencies": {
     "autoprefixer-cli": "^1.0.0",
-    "browser-sync": "^2.26.13",
+    "browser-sync": "^2.26.12",
     "eslint": "^7.11.0",
     "html-validate": "^3.3.0",
     "mkdirp": "^1.0.4",

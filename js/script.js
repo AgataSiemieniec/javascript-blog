@@ -204,8 +204,7 @@
   /* [NEW] START LOOP: for each tag in allTags: */
   for(let tag in allTags){
     /* [NEW] generate code of a link and add it to allTagsHTML */
-    const tagLinkHTML = '<li><a class="' + calculateTagClass(allTags[tag], tagsParams) + '" href="#tag-' + tag + '">' + tag + '</a></li> ';
-    console.log('tagLinkHTML:', tagLinkHTML);
+    const tagLinkHTML = '<li><a class="' + calculateTagClass(allTags[tag], tagsParams) + '" href="#tag-' + tag + '">' + tag +'('+ allTags[tag] + ')</a></li> ';    console.log('tagLinkHTML:', tagLinkHTML);
     //const tagLinkHTML = '<li>' + calculateTagClass(allTags[tag], tagsParam) + '</li>';
 
     allTagsHTML += tagLinkHTML; //tag + ' (' + allTags[tag] + ') ';
@@ -336,7 +335,7 @@
     let allAuthorsHTML = '';
     for(let author in allAuthors){
 
-      const authorLinkHTML ='<li><a href="#author-' + author + '">' + author + '</a></li> ';
+      const authorLinkHTML ='<li><a href="#author-' + author + '">' + author + ' ('+ allAuthors[author] + ')</a></li> ';
       allAuthorsHTML += authorLinkHTML;
       console.log('authorLinkHTML:', authorLinkHTML);
     authorList.innerHTML = allAuthorsHTML;
